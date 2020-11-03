@@ -8,11 +8,14 @@ namespace Catering.Data
         public CateringContext() : base("Data Source=.; Initial Catalog = CateringDB; Integrated Security = true") { }
 
         public CateringContext(string connectionString) : base(connectionString)
-        { }
+        {
+            
+        }
 
         public DbSet<CateringOrder> CateringOrders { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<ChefType> ChefTypes { get; set; }
+        public DbSet<Waiter> Waiters { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -32,6 +35,10 @@ namespace Catering.Data
                 .HasRequired(x => x.ChefType)
                 .WithMany(x => x.CateringOrders)
                 .HasForeignKey(x => x.ChefTypeId);
+
+            modelBuilder.Entity<CateringOrder>()
+                .HasMany(x => x.Waiters)
+                .WithMany(x => x.CateringOrders);
 
             #endregion
         }

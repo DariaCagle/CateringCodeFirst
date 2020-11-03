@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Catering.Data.Models
 {
@@ -15,5 +17,7 @@ namespace Catering.Data.Models
 
         public int UserId { get; set; }
         public virtual User User { get; set; }
+
+        public virtual ICollection<Waiter> Waiters { get; set; }
     }
 }
