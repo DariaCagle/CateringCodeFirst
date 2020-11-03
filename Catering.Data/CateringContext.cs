@@ -9,7 +9,7 @@ namespace Catering.Data
 
         public CateringContext(string connectionString) : base(connectionString)
         {
-            
+
         }
 
         public DbSet<CateringOrder> CateringOrders { get; set; }

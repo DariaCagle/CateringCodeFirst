@@ -20,6 +20,7 @@ namespace Catering.Domain.Services
                 var map = cfg.CreateMap<UserModel, User>().ReverseMap();
                 cfg.CreateMap<ChefTypeModel, ChefType>().ReverseMap();
                 cfg.CreateMap<CateringOrderModel, CateringOrder>().ReverseMap();
+                cfg.CreateMap<WaiterModel, Waiter>().ReverseMap();
             });
             _mapper = new Mapper(mapperConfig);
 
@@ -28,7 +29,7 @@ namespace Catering.Domain.Services
         public ChefTypeModel CreateChef(ChefTypeModel model)
         {
 
-            var chef = _mapper.Map< ChefType> (model);
+            var chef = _mapper.Map<ChefType>(model);
 
             var addedChef = _chefTypeRepository.Create(chef);
 
@@ -49,7 +50,7 @@ namespace Catering.Domain.Services
 
         public ChefTypeModel UpdateChef(ChefTypeModel model)
         {
-            var chef = _mapper.Map<ChefType> (model);
+            var chef = _mapper.Map<ChefType>(model);
 
             var updatedChef = _chefTypeRepository.Update(chef);
 

@@ -24,6 +24,8 @@ namespace Catering.Controllers
                 cfg.CreateMap<UserModel, UserViewModel>();
                 cfg.CreateMap<ChefTypeModel, ChefTypeViewModel>();
                 cfg.CreateMap<CateringOrderModel, CateringOrderViewModel>();
+                cfg.CreateMap<WaiterModel, WaiterViewModel>();
+                cfg.CreateMap<WaiterPostModel, WaiterModel>();
             });
             _mapper = new Mapper(mapperConfig);
 

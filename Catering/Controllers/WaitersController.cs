@@ -3,11 +3,7 @@ using Catering.Domain.Models;
 using Catering.Domain.Services;
 using Catering.Models.PostModels;
 using Catering.Models.ViewModels;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Catering.Controllers
 {
@@ -25,11 +21,11 @@ namespace Catering.Controllers
                 var map = cfg.CreateMap<UserPostModel, UserModel>();
                 cfg.CreateMap<ChefTypePostModel, ChefTypeModel>();
                 cfg.CreateMap<CateringOrderPostModel, CateringOrderModel>();
-                cfg.CreateMap<WaiterPostModel, WaiterModel>();
                 cfg.CreateMap<UserModel, UserViewModel>();
                 cfg.CreateMap<ChefTypeModel, ChefTypeViewModel>();
                 cfg.CreateMap<CateringOrderModel, CateringOrderViewModel>();
                 cfg.CreateMap<WaiterModel, WaiterViewModel>();
+                cfg.CreateMap<WaiterPostModel, WaiterModel>();
             });
             _mapper = new Mapper(mapperConfig);
 

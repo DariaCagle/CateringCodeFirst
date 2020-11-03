@@ -20,6 +20,7 @@ namespace Catering.Domain.Services
                 var map = cfg.CreateMap<UserModel, User>().ReverseMap();
                 cfg.CreateMap<ChefTypeModel, ChefType>().ReverseMap();
                 cfg.CreateMap<CateringOrderModel, CateringOrder>().ReverseMap();
+                cfg.CreateMap<WaiterModel, Waiter>().ReverseMap();
             });
             _mapper = new Mapper(mapperConfig);
 

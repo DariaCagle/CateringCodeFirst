@@ -2,11 +2,7 @@
 using Catering.Data.Models;
 using Catering.Data.Repositories;
 using Catering.Domain.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Catering.Domain.Services
 {
