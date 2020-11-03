@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Catering.Models.ViewModels
 {
@@ -15,5 +16,8 @@ namespace Catering.Models.ViewModels
 
         public int ChefTypeId { get; set; }
         public ChefTypeViewModel ChefType { get; set; }
+
+        public int WaiterId { get; set; }
+        public WaiterViewModel Waiter { get; set; }
     }
 }

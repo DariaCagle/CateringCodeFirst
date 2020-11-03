@@ -7,12 +7,12 @@ using System.Collections.Generic;
 
 namespace Catering.Controllers
 {
-    public class UserController
+    public class UsersController
     {
         private readonly UserService _userService;
         private readonly IMapper _mapper;
 
-        public UserController()
+        public UsersController()
         {
             _userService = new UserService();
 

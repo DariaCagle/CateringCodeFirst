@@ -7,12 +7,12 @@ using System.Collections.Generic;
 
 namespace Catering.Controllers
 {
-    public class ChefTypeController
+    public class ChefTypesController
     {
         private readonly ChefTypeService _chefTypeService;
         private readonly IMapper _mapper;
 
-        public ChefTypeController()
+        public ChefTypesController()
         {
             _chefTypeService = new ChefTypeService();
 

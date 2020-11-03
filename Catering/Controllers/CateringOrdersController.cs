@@ -7,12 +7,12 @@ using System.Collections.Generic;
 
 namespace Catering.Controllers
 {
-    public class CateringOrderController
+    public class CateringOrdersController
     {
         private readonly CateringOrderService _cateringOrderService;
         private readonly IMapper _mapper;
 
-        public CateringOrderController()
+        public CateringOrdersController()
         {
             _cateringOrderService = new CateringOrderService();
 
@@ -24,6 +24,8 @@ namespace Catering.Controllers
                 cfg.CreateMap<UserModel, UserViewModel>();
                 cfg.CreateMap<ChefTypeModel, ChefTypeViewModel>();
                 cfg.CreateMap<CateringOrderModel, CateringOrderViewModel>();
+                cfg.CreateMap<WaiterModel, WaiterViewModel>();
+                cfg.CreateMap<WaiterPostModel, WaiterModel>();
             });
             _mapper = new Mapper(mapperConfig);
 

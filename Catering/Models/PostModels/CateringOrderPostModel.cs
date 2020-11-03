@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Catering.Models.PostModels
 {
@@ -14,5 +15,8 @@ namespace Catering.Models.PostModels
 
         public int ChefTypeId { get; set; }
         public ChefTypePostModel ChefType { get; set; }
+
+        public int WaiterId { get; set; }
+        public WaiterPostModel Waiter { get; set; }
     }
 }

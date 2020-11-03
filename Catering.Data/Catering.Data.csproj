@@ -60,9 +60,9 @@
     <Compile Include="Migrations\202011030941464_Add_ChefType.designer.cs">
       <DependentUpon>202011030941464_Add_ChefType.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202011031509045_Add_Waiters.cs" />
-    <Compile Include="Migrations\202011031509045_Add_Waiters.designer.cs">
-      <DependentUpon>202011031509045_Add_Waiters.cs</DependentUpon>
+    <Compile Include="Migrations\202011031726414_Add_Waiter_Table.cs" />
+    <Compile Include="Migrations\202011031726414_Add_Waiter_Table.designer.cs">
+      <DependentUpon>202011031726414_Add_Waiter_Table.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CateringOrder.cs" />
@@ -86,8 +86,8 @@
     <EmbeddedResource Include="Migrations\202011030941464_Add_ChefType.resx">
       <DependentUpon>202011030941464_Add_ChefType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011031509045_Add_Waiters.resx">
-      <DependentUpon>202011031509045_Add_Waiters.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202011031726414_Add_Waiter_Table.resx">
+      <DependentUpon>202011031726414_Add_Waiter_Table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Catering.Domain.Models
 {
@@ -15,5 +16,8 @@ namespace Catering.Domain.Models
 
         public int ChefTypeId { get; set; }
         public ChefTypeModel ChefType { get; set; }
+
+        public int WaiterId { get; set; }
+        public WaiterModel Waiter { get; set; }
     }
 }

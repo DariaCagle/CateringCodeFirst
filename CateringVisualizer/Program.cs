@@ -1,6 +1,8 @@
 ﻿using Catering.Controllers;
 using Catering.Models.PostModels;
+using Catering.Models.ViewModels;
 using System;
+using System.Collections.Generic;
 
 namespace CateringVisualizer
 {
@@ -30,26 +32,42 @@ namespace CateringVisualizer
             //}
             //Console.WriteLine();
 
-            var orderController = new CateringOrderController();
-            //var order = new CateringOrderPostModel()
+            var waitersController = new WaitersController();
+            //var waiter = new WaiterPostModel()
             //{
-            //    UserId = 3,
-            //    ChefTypeId = 3,
-            //    Date = new DateTime(2021, 06, 13),
-            //    NumberOfPeople = 36,
-            //    Outdoors = false,
-            //    Address = "13 Elm Street"
+            //    FullName = "Andrew Miller",
+            //    Address = "15 Wilson Street"
             //};
+            //var model = waitersController.CreateWaiter(waiter);
+            //Console.WriteLine(model.FullName);
+
+
+
+            var orderController = new CateringOrdersController();
+            var order = new CateringOrderPostModel()
+            {
+                UserId = 3,
+                ChefTypeId = 3,
+                Date = new DateTime(2021, 06, 13),
+                NumberOfPeople = 36,
+                Outdoors = false,
+                Address = "13 Elm Street",
+                WaiterId = 1
+            };
+            orderController.CreateCateringOrder(order);
+
 
             //var newOrder = orderController.CreateCateringOrder(order);
             //Console.WriteLine(newOrder.Id);
             //Console.WriteLine(newOrder.ChefType.Name);
-            foreach (var or in orderController.GetAll())
-            {
-                Console.Write(or.User.FullName + " ");
-                Console.WriteLine(or.ChefType.Name);
-            }
-            Console.WriteLine();
+            //foreach (var or in orderController.GetAll())
+            //{
+            //    Console.Write(or.User.FullName + " ");
+            //    Console.WriteLine(or.ChefType.Name);
+            //}
+            //Console.WriteLine();
+
+
         }
     }
 }

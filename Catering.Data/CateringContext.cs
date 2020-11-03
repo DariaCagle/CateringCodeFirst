@@ -5,7 +5,7 @@ namespace Catering.Data
 {
     public class CateringContext : DbContext
     {
-        public CateringContext() : base("Data Source=.; Initial Catalog = CateringDB; Integrated Security = true") { }
+        public CateringContext() : base("Data Source=.; Initial Catalog = CateringDataB; Integrated Security = true") { }
 
         public CateringContext(string connectionString) : base(connectionString)
         {
@@ -37,8 +37,9 @@ namespace Catering.Data
                 .HasForeignKey(x => x.ChefTypeId);
 
             modelBuilder.Entity<CateringOrder>()
-                .HasMany(x => x.Waiters)
-                .WithMany(x => x.CateringOrders);
+                .HasRequired(x => x.Waiter)
+                .WithMany(x => x.CateringOrders)
+                .HasForeignKey(x => x.WaiterId);
 
             #endregion
         }

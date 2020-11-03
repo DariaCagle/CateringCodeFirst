@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Dynamic;
 
 namespace Catering.Data.Models
 {
@@ -18,6 +19,7 @@ namespace Catering.Data.Models
         public int UserId { get; set; }
         public virtual User User { get; set; }
 
-        public virtual ICollection<Waiter> Waiters { get; set; }
+        public int WaiterId { get; set; }
+        public virtual Waiter Waiter { get; set; }
     }
 }

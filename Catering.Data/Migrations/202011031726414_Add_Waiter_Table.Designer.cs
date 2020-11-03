@@ -7,13 +7,13 @@ namespace Catering.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class Add_Waiters : IMigrationMetadata
+    public sealed partial class Add_Waiter_Table : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Add_Waiters));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Add_Waiter_Table));
         
         string IMigrationMetadata.Id
         {
-            get { return "202011031509045_Add_Waiters"; }
+            get { return "202011031726414_Add_Waiter_Table"; }
         }
         
         string IMigrationMetadata.Source
