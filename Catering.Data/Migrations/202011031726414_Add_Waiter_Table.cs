@@ -18,7 +18,7 @@
 
             AddColumn("dbo.CateringOrders", "WaiterId", c => c.Int(nullable: false, defaultValue: 1));
             CreateIndex("dbo.CateringOrders", "WaiterId");
-            Sql("Insert into dbo.Waiters(Name) values (\'Not selected\')");
+            Sql("Insert into dbo.Waiters(FullName, Address) values (\'Not selected\', \'Not selected\')");
             AddForeignKey("dbo.CateringOrders", "WaiterId", "dbo.Waiters", "Id", cascadeDelete: true);
         }
 

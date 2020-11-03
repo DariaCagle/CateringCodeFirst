@@ -17,8 +17,9 @@
                 })
                 .PrimaryKey(t => t.Id);
 
-            AddColumn("dbo.CateringOrders", "ChefTypeId", c => c.Int(nullable: false));
+            AddColumn("dbo.CateringOrders", "ChefTypeId", c => c.Int(nullable: false, defaultValue: 1));
             CreateIndex("dbo.CateringOrders", "ChefTypeId");
+            Sql("Insert into dbo.Waiters(Name) values (\'Not selected\')");
             AddForeignKey("dbo.CateringOrders", "ChefTypeId", "dbo.ChefTypes", "Id", cascadeDelete: true);
             DropColumn("dbo.CateringOrders", "ChefId");
             DropTable("dbo.Chefs");
