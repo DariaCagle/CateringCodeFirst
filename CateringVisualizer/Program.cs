@@ -57,6 +57,7 @@ namespace CateringVisualizer
             foreach (var or in orderController.GetAll())
             {
                 Console.Write(or.User.FullName + " ");
+                Console.WriteLine(or.ChefType.Name);
             }
             Console.WriteLine();
 

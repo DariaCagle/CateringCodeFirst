@@ -1,6 +1,8 @@
 ﻿using Catering.Data.Models;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Catering.Data.Repositories
 {
@@ -29,7 +31,10 @@ namespace Catering.Data.Repositories
 
         public IEnumerable<CateringOrder> GetAll()
         {
-            return _ctx.CateringOrders.ToList();
+            return _ctx.CateringOrders
+                .Include(x => x.ChefType)
+                .Include(x => x.User)
+                .ToList();
         }
 
         public CateringOrder Update(CateringOrder model)
